@@ -9,7 +9,7 @@ class FormElement extends Component {
     render() {
 
         return (
-            <form className='formElement' style={{borderStyle: 'solid', borderRadius: 2, borderWidth: 5}}>
+            <form className='formElement' style={{borderStyle: 'solid', borderRadius: 2, borderWidth: 10}}>
                 <h4>I am Element.js. I contain an individual Form. </h4>
                 <input className="inputField" type="text" placeholder='Stuff goes here'></input>
                 <p></p>

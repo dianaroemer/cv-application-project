@@ -12,7 +12,6 @@ class EducationalExperienceForm extends Component {
                 <h3>I am EducationalExperienceForm.js. I take all of the educational experience fields and keep them together! I am one wrapper field with an add button, and an interating subcomponent for variable numbers of educationExperienceField</h3>
 
                 <EducationExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/>
-                <p></p>
                 <EducationExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/>
             
             <p></p>
@@ -31,7 +30,7 @@ class EducationExperienceSlot extends Component {
 
     render() {
         return (
-            <form className='educationExperienceSlot' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'aqua', borderWidth: 10}}>
+            <form className='educationExperienceSlot' style={{borderStyle: 'dotted', borderRadius: 2, borderColor: 'aqua', borderWidth: 10}}>
                 <p>I am an individual EducationExperienceSlot. There can be several or none of me, and are determined variably by state management in app!</p>
 
 

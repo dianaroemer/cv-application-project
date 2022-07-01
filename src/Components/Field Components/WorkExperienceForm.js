@@ -11,7 +11,6 @@ class WorkExperienceForm extends Component {
             <div className='workExperienceField' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'navy', borderWidth: 10}}>
                 <h3>I am workExperienceForm.js. I take all of the work experience fields and keep them together! I am one wrapper field with an add button, and an interating subcomponent for variable numbers of workExperienceField</h3>
                 <WorkExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/>
-                <p></p>
                 <WorkExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/>
             
             <p></p>
@@ -30,7 +29,7 @@ class WorkExperienceSlot extends Component {
 
     render() {
         return (
-            <form className='workExperienceSlot' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'magenta', borderWidth: 10}}>
+            <form className='workExperienceSlot' style={{borderStyle: 'dotted', borderRadius: 2, borderColor: 'magenta', borderWidth: 10}}>
                 <p>I am an individual WorkExperienceSlot. There can be several or none of me, and are determined variably by state management in app!</p>
                 <div className='positionFieldContainer'>
                     Position: <input className="inputField" type="text" placeholder='Stormtrooper, 2nd Battalion'></input>

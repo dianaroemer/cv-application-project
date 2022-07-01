@@ -53,7 +53,7 @@ class App extends Component {
     }
   }
 
-  updateInputField(e, targetParent, targetField, targetParentSubtype) {
+  updateInputField(e, targetParent, targetField) {
     // console.log(`I am updateInputField, here are my passed args`);
     // console.log(e)
     // console.log(e.target.value);

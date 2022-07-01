@@ -20,7 +20,8 @@ class FormContainer extends Component {
                 <PersonalInformationForm 
                     updateInputField={updateInputField}
                     personalInformation={appState.personalInformation}/>
-                <WorkExperienceForm/>
+                <WorkExperienceForm workExperienceArr={appState.workExperience.workExperienceArr}
+                    updateInputField={updateInputField}/>
                 <EducationalExperienceForm/>
                 {/* <FormElement/> */}
                 {/* <FormElement/> */}

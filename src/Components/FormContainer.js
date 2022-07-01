@@ -11,13 +11,17 @@ class FormContainer extends Component {
     }
 
     render() {
+        const { updateInputField, appState } = this.props;
+
 
         return (
             <div className='FormContainer' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'green', borderWidth: 10}}>
                 <h3>I am FormContainer.js. I contain forms. Let's put something together</h3>
-                <PersonalInformationForm/>
-                <WorkExperienceForm/>
-                <EducationalExperienceForm/>
+                <PersonalInformationForm 
+                    updateInputField={updateInputField}
+                    personalInformation={appState.personalInformation}/>
+                {/* <WorkExperienceForm/> */}
+                {/* <EducationalExperienceForm/> */}
                 {/* <FormElement/> */}
                 {/* <FormElement/> */}
             </div>

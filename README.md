@@ -1,5 +1,4 @@
 Live page available at 
-
 # https://dominicroemer.github.io/cv-application-project/
 
 # Getting Started with Create React App

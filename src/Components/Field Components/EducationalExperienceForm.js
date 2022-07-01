@@ -42,10 +42,10 @@ class EducationExperienceSlot extends Component {
                     </input>
                 </div>
                 <div className='startDateFieldContainer'>
-                    Start Date: <input className="inputField" type="month" value='2015-01'></input>
+                    Start Date: <input className="inputField" type="month" value='2015-01' onChange={e => e.preventDefault()}></input>
                 </div>
                 <div className='endDateFieldContainer'>
-                    End Date: <input className="inputField" type="month" value='2019-01'></input>
+                    End Date: <input className="inputField" type="month" value='2019-01' onChange={e => e.preventDefault()}></input>
                 </div>
 
                 <div className='detailsFieldContainer'>

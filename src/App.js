@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react'
 import Navbar from './Components/Navbar';
@@ -25,9 +25,20 @@ class App extends Component {
         gitHub: '',
         type: 'personalInformation'
       },
-    
-
-    };
+      workExperience: {
+        type: 'workExperience',
+        workExperienceArr: [
+          {
+            position: '',
+            company: '',
+            location: '',
+            startDate: '',
+            endDate: '',
+            descriptionOfDuties: '',
+          }
+        ]
+      },
+    }
   }
 
   updateInputField(e, targetParent, targetField) {
@@ -37,9 +48,10 @@ class App extends Component {
     // console.log(targetParent);
     // console.log(targetField);
     // console.log(`-------------------------------`)
+    console.log(targetParent)
 
     this.setState({
-        // This setState works by passing around the targetParent.type and the targetField. targetParent.type is included in each userData object as a string description of each object's name, while targetField is manually set when passing the onChange function, as it is assigned to its specific field and value. There may be a way to tie a React elements value prop more literally, but this works quickly with string evaluation into a computer property name that only overrides the one value that's changing.
+        // This setState works by passing around the targetParent.type and the targetField. targetParent.type is included in each userData object as a string description of each parent object's name, while targetField is manually set when passing the onChange function, as it is assigned to its specific field and value. There may be a way to tie a React elements value prop more literally, but this works quickly with string evaluation into a computed property name that only overrides the one value that is being targeted.
       [targetParent.type] : {
         ...this.state[targetParent.type],
         [targetField] : e.target.value

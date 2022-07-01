@@ -10,8 +10,8 @@ class WorkExperienceForm extends Component {
         return (
             <div className='workExperienceField' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'navy', borderWidth: 10}}>
                 <h3>I am workExperienceForm.js. I take all of the work experience fields and keep them together! I am one wrapper field with an add button, and an interating subcomponent for variable numbers of workExperienceField</h3>
-                <WorkExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/>
-                <WorkExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/>
+                <WorkExperienceSlot />
+                <WorkExperienceSlot />
             
             <p></p>
             <button type="submit" onClick={e => e.preventDefault()}>Add More Work Experience</button>
@@ -42,10 +42,10 @@ class WorkExperienceSlot extends Component {
                     Location: <input className="inputField" type="text" placeholder='Star, Death, The'></input>
                 </div>
                 <div className='startDateFieldContainer'>
-                    Start Date: <input className="inputField" type="month" value='2015-01'></input>
+                    Start Date: <input className="inputField" type="month" value='2015-01' onChange={e => e.preventDefault()}></input>
                 </div>
                 <div className='endDateFieldContainer'>
-                    Start Date: <input className="inputField" type="month" value='2019-01'></input>
+                    End Date: <input className="inputField" type="month" value='2019-01' onChange={e => e.preventDefault()}></input>
                 </div>
 
                 <div className='descriptionFieldContainer'>

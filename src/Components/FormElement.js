@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import './Styling/FormElementStyle.css'
-import PersonalInformationForm from './Field Components/PersonalInformationForm';
+// import PersonalInformationForm from './Field Components/PersonalInformationForm';
 
 class FormElement extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+        // super(props);
+    // }
 
     render() {
 

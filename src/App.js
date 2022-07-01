@@ -57,7 +57,7 @@ class App extends Component {
           <FormContainer 
             updateInputField={this.updateInputField}
             appState={this.state}/>
-          <PreviewContainer/>
+          <PreviewContainer appState={this.state}/>
         </div>
       </div>
     )

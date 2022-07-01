@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import FormElement from './FormElement';
+// import FormElement from './FormElement';
 import PersonalInformationForm from './Field Components/PersonalInformationForm';
 import WorkExperienceForm from './Field Components/WorkExperienceForm'
 import EducationalExperienceForm from './Field Components/EducationalExperienceForm';
 
 
 class FormContainer extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+        // super(props);
+    // }
 
     render() {
         const { updateInputField, appState } = this.props;
@@ -20,8 +20,8 @@ class FormContainer extends Component {
                 <PersonalInformationForm 
                     updateInputField={updateInputField}
                     personalInformation={appState.personalInformation}/>
-                {/* <WorkExperienceForm/> */}
-                {/* <EducationalExperienceForm/> */}
+                <WorkExperienceForm/>
+                <EducationalExperienceForm/>
                 {/* <FormElement/> */}
                 {/* <FormElement/> */}
             </div>

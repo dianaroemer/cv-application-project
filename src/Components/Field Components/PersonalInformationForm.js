@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
 class PersonalInformationForm extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+        // super(props);
+    // }
 
     render() {
         const { updateInputField, personalInformation } = this.props;    

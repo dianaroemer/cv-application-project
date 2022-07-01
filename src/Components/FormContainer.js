@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import FormElement from './FormElement';
-import PreviewContainer from './PreviewContainer';
 import PersonalInformationForm from './Field Components/PersonalInformationForm';
 
 
@@ -18,7 +17,6 @@ class FormContainer extends Component {
                 <FormElement/>
                 <FormElement/>
                 <p>-----------------</p>
-                <PreviewContainer />
             </div>
         )
     }

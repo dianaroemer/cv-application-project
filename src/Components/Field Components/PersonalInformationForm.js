@@ -34,7 +34,7 @@ class PersonalInformationForm extends Component {
                     LinkedIn: <input className="inputField" type="url" placeholder='linkedin.com/McClane-John'></input>
                 </div>
                 <div className='gitHubFieldContainer'>
-                    GitHub: <input className="inputField" type="url" placeholder='github.com/'></input>
+                    GitHub: <input className="inputField" type="url" placeholder='github.com/github'></input>
                 </div>
 
 

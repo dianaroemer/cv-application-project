@@ -3,6 +3,8 @@ import './App.css';
 import React, { Component } from 'react'
 import Navbar from './Components/Navbar';
 import FormContainer from './Components/FormContainer';
+import PreviewContainer from './Components/PreviewContainer';
+
 
 
 class App extends Component {
@@ -19,7 +21,10 @@ class App extends Component {
       <div className="AppContainer" style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'blue', borderWidth: 10}}>
         <h2>I am App.js, my parent is AppContainer. Would you like to develop an App?</h2>
         <Navbar/>
-        <FormContainer/>
+        <div className='content' >
+          <FormContainer/>
+          <PreviewContainer/>
+        </div>
       </div>
     )
   }

@@ -88,7 +88,7 @@ class App extends Component {
     } 
 
 
-    console.log(this.state.workExperience.workExperienceArr[0]);
+    // console.log(this.state.workExperience.workExperienceArr[0]);
   }
 
   render() {

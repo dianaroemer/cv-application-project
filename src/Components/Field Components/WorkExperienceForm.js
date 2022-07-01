@@ -11,7 +11,7 @@ class WorkExperienceForm extends Component {
             <div className='workExperienceField' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'navy', borderWidth: 10}}>
                 <h3>I am workExperienceForm.js. I take all of the work experience fields and keep them together! I am one wrapper field with an add button, and an interating subcomponent for variable numbers of workExperienceField</h3>
                 <WorkExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/>
-
+                <p></p>
                 <WorkExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/>
             
             <p></p>
@@ -54,7 +54,7 @@ class WorkExperienceSlot extends Component {
                 </div>
 
                 <button type="button"> Delete this Entry </button>
-
+                <p></p>
             </form>
         )
     }

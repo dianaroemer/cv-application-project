@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Styling/FormElementStyle.css'
+import PersonalInformationForm from './Field Components/PersonalInformationForm';
 
 class FormElement extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class FormElement extends Component {
 
         return (
             <form className='formElement' style={{borderStyle: 'dotted', borderRadius: 2, borderWidth: 10}}>
-                <h4>I am FormElement.js. I contain an individual Form. </h4>
+                <h4>I am FormElement.js. I contain a generic individual Form. </h4>
                 <input className="inputField" type="text" placeholder='Stuff goes here'></input>
                 <p></p>
                 <input className="inputField" type="text" placeholder='I am a second input field'></input>

@@ -7,22 +7,37 @@ class EducationalExperienceForm extends Component {
 
     render() {
 
+        const {educationalExperienceArr, updateInputField, createExperience, deleteExperience, elementType} = this.props;
+        let rows =[];
+
+        educationalExperienceArr.forEach(element => {
+            // console.log(updateInputField);
+            rows.push(
+                <EducationalExperienceSlot 
+                    workExperience={element}
+                    key={element.key}
+                    updateInputField={updateInputField}
+                    deleteExperience={deleteExperience}/>
+            )
+        });
+
         return (
             <div className='educationExperienceField' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'brown', borderWidth: 10}}>
                 <h3>I am EducationalExperienceForm.js. I take all of the educational experience fields and keep them together! I am one wrapper field with an add button, and an interating subcomponent for variable numbers of educationExperienceField</h3>
 
-                <EducationExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/>
-                <EducationExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/>
+                {/* <EducationalExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/> */}
+                {/* <EducationalExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/> */}
+                {rows}
             
             <p></p>
-            <button type="submit" onClick={e => e.preventDefault()}>Add More Educational Experience</button>
+            <button type="submit" onClick={e => createExperience(e,elementType)}>Add More Educational Experience</button>
             <p></p>
         </div>
         )
     }
 }
 
-class EducationExperienceSlot extends Component {
+class EducationalExperienceSlot extends Component {
 
     // constructor(props) {
         // super(props);

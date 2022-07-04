@@ -25,8 +25,13 @@ class FormContainer extends Component {
                     updateInputField={updateInputField}
                     createExperience={createExperience}
                     deleteExperience={deleteExperience}/>
-                <EducationalExperienceForm/>
-                {/* <FormElement/> */}
+                <EducationalExperienceForm
+                    educationalExperienceArr={appState.educationalExperience.educationalExperienceArr}
+                    elementType={appState.educationalExperience.type}
+                    updateInputField={updateInputField}
+                    createExperience={createExperience}
+                    deleteExperience={deleteExperience}/>
+                    {/* <FormElement/> */}
                 {/* <FormElement/> */}
             </div>
         )

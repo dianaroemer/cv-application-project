@@ -53,21 +53,21 @@ class EducationalExperienceSlot extends Component {
 
 
                 <div className='institutionFieldContainer'>
-                    Institution: <input className="inputField" type="text" placeholder='Hogwarts School of Witchcraft and Wizardry'></input>
+                    Institution: <input className="inputField" type="text" placeholder='Hogwarts School of Witchcraft and Wizardry' onChange={e => updateInputField(e, educationalExperience, 'institution')} value={educationalExperience.institution}></input>
                 </div>
                 <div className='degreeFieldContainer'>
-                    Degree: <input className="inputField" type="text" placeholder='Master of The Dark Arts'>
+                    Degree: <input className="inputField" type="text" placeholder='Master of The Dark Arts' onChange={e => updateInputField(e, educationalExperience, 'degree')} value={educationalExperience.degree}>
                     </input>
                 </div>
                 <div className='startDateFieldContainer'>
-                    Start Date: <input className="inputField" type="month" value='2015-01' onChange={e => e.preventDefault()}></input>
+                    Start Date: <input className="inputField" type="month"   onChange={e => updateInputField(e, educationalExperience, 'startDate')} value={educationalExperience.startDate}></input>
                 </div>
                 <div className='endDateFieldContainer'>
-                    End Date: <input className="inputField" type="month" value='2019-01' onChange={e => e.preventDefault()}></input>
+                    End Date: <input className="inputField" type="month"  onChange={e => updateInputField(e, educationalExperience, 'endDate')} value={educationalExperience.endDate}></input>
                 </div>
 
                 <div className='detailsFieldContainer'>
-                    Additional Details: <textarea className='inputField' placeholder='First Hufflepuff to graduate in The Dark Arts'></textarea>
+                    Additional Details: <textarea className='inputField' placeholder='First Hufflepuff to graduate in The Dark Arts' onChange={e => updateInputField(e, educationalExperience, 'details')} value={educationalExperience.details}></textarea>
                 </div>
                 <button type="button" onClick={e => deleteExperience(e, educationalExperience)}> Delete this Entry </button>
                 <p></p>

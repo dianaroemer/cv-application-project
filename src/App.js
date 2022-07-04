@@ -82,7 +82,7 @@ class App extends Component {
     // console.log(`I am updateInputField, here are my passed args`);
     // console.log(e)
     // console.log(e.target.value);
-    // console.log(targetParent);
+    console.log(targetParent);
     // console.log(targetField);
     // console.log(`-------------------------------`)
 
@@ -94,11 +94,12 @@ class App extends Component {
           [targetField] : e.target.value
         }
       })
-    } else if(targetParent.type === 'workExperience') {
+    } else if(targetParent.type === 'workExperience' || targetParent.type === `educationalExperience`) {
       // This branch of setState handles modular components, like workExperience and educationalExperience. Because there can be a variable number of workExperience and EducationalExperience, the state management parses away the relevant input, targetField, and parent information to work with any given input that follows App.js's state structure.
       // console.log(targetParent, targetField, e.target.value, targetParent.type);
       this.setState({
         [targetParent.type]: {
+          type: targetParent.type,
           [targetParent.type + 'Arr']: this.state[targetParent.type][targetParent.type + 'Arr'].map( element => {
             if(element === targetParent) {
               return {
@@ -110,9 +111,9 @@ class App extends Component {
           }),
         }
       })
-    } 
+    }  
 
-
+    console.log(this.state)
     // console.log(this.state.workExperience.workExperienceArr[0]);
   }
 

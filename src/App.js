@@ -100,6 +100,26 @@ class App extends Component {
     console.log(`You're trying to create a new work Experience or Education Experience`);
     console.log(targetType)
 
+    if(targetType === 'workExperience') {
+      this.setState({
+        [targetType]: {
+          type: targetType,
+          [targetType + 'Arr']: this.state[targetType][targetType + 'Arr'].concat([{
+              position: '3',
+              company: '',
+              location: '',
+              startDate: '',
+              endDate: '',
+              descriptionOfDuties: '',
+              key: uniqid(),
+              type: 'workExperience'
+            }, 
+          ])
+        }
+      })
+    } else if( targetType === 'personalExperience') {
+      
+    }
   }
 
   deleteExperience(e, targetElement) {
@@ -107,6 +127,7 @@ class App extends Component {
     console.log(`You're trying to delete a work Experience form or Education Experience form`)
     console.log(targetElement)
     console.log(targetElement.type)
+    console.log(this.state.workExperience)
   }
 
   render() {

@@ -13,6 +13,8 @@ class App extends Component {
     super(props);
 
     this.updateInputField = this.updateInputField.bind(this);
+    this.createExperience = this.createExperience.bind(this);
+    this.deleteExperience = this.deleteExperience.bind(this);
 
     this.state = {
       personalInformation: {
@@ -27,13 +29,14 @@ class App extends Component {
         type: 'personalInformation'
       },
       workExperience: {
+        type: 'workExperience',
         workExperienceArr: [
           {
             position: '1',
             company: '',
             location: '',
-            startDate: '2015-01',
-            endDate: '2019-01',
+            startDate: '',
+            endDate: '',
             descriptionOfDuties: '',
             key: uniqid(),
             type: 'workExperience'
@@ -42,13 +45,14 @@ class App extends Component {
             position: '2',
             company: '',
             location: '',
-            startDate: '2019-01',
-            endDate: '2022-06',
+            startDate: '',
+            endDate: '',
             descriptionOfDuties: '',
             key: uniqid(),
             type: 'workExperience'
           }
-        ]
+        ], 
+        
       },
     }
   }
@@ -91,6 +95,20 @@ class App extends Component {
     // console.log(this.state.workExperience.workExperienceArr[0]);
   }
 
+  createExperience(e, targetType) {
+    e.preventDefault();
+    console.log(`You're trying to create a new work Experience or Education Experience`);
+    console.log(targetType)
+
+  }
+
+  deleteExperience(e, targetElement) {
+    e.preventDefault()
+    console.log(`You're trying to delete a work Experience form or Education Experience form`)
+    console.log(targetElement)
+    console.log(targetElement.type)
+  }
+
   render() {
     return (
       <div className="AppContainer" style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'blue', borderWidth: 10}}>
@@ -99,6 +117,8 @@ class App extends Component {
         <div className='content' >
           <FormContainer 
             updateInputField={this.updateInputField}
+            createExperience={this.createExperience}
+            deleteExperience={this.deleteExperience}
             appState={this.state}/>
           <PreviewContainer appState={this.state}/>
         </div>

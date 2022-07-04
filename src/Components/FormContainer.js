@@ -11,7 +11,7 @@ class FormContainer extends Component {
     // }
 
     render() {
-        const { updateInputField, appState } = this.props;
+        const { updateInputField, appState, createExperience, deleteExperience } = this.props;
 
 
         return (
@@ -21,7 +21,10 @@ class FormContainer extends Component {
                     updateInputField={updateInputField}
                     personalInformation={appState.personalInformation}/>
                 <WorkExperienceForm workExperienceArr={appState.workExperience.workExperienceArr}
-                    updateInputField={updateInputField}/>
+                    elementType={appState.workExperience.type}
+                    updateInputField={updateInputField}
+                    createExperience={createExperience}
+                    deleteExperience={deleteExperience}/>
                 <EducationalExperienceForm/>
                 {/* <FormElement/> */}
                 {/* <FormElement/> */}

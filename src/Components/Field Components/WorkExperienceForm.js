@@ -7,7 +7,7 @@ class WorkExperienceForm extends Component {
 
     render() {
 
-        const {workExperienceArr, updateInputField} = this.props;
+        const {workExperienceArr, updateInputField, createExperience, deleteExperience, elementType} = this.props;
         let rows =[];
 
         workExperienceArr.forEach(element => {
@@ -16,7 +16,8 @@ class WorkExperienceForm extends Component {
                 <WorkExperienceSlot 
                     workExperience={element}
                     key={element.key}
-                    updateInputField={updateInputField}/>
+                    updateInputField={updateInputField}
+                    deleteExperience={deleteExperience}/>
             )
         });
 
@@ -27,7 +28,7 @@ class WorkExperienceForm extends Component {
                 {rows}
             
             <p></p>
-            <button type="submit" onClick={e => e.preventDefault()}>Add More Work Experience</button>
+            <button type="submit" onClick={e => createExperience(e,elementType)}>Add More Work Experience</button>
             <p></p>
         </div>
         )
@@ -42,7 +43,7 @@ class WorkExperienceSlot extends Component {
 
     render() {
 
-        const { workExperience, updateInputField } = this.props;
+        const { workExperience, updateInputField, deleteExperience } = this.props;
 
         return (
             <form className='workExperienceSlot' style={{borderStyle: 'dotted', borderRadius: 2, borderColor: 'magenta', borderWidth: 10}}>
@@ -68,7 +69,7 @@ class WorkExperienceSlot extends Component {
                     Description of Duties: <textarea className='inputField' placeholder='Kept workspace free of filth Rebel scum, organized weekly Stormtrooper Socials' onChange={e => updateInputField(e, workExperience, 'descriptionOfDuties')} value={workExperience.descriptionOfDuties}></textarea>
                 </div>
 
-                <button type="button"> Delete this Entry </button>
+                <button type="button" onClick={e => deleteExperience(e, workExperience)}> Delete this Entry </button>
                 <p></p>
             </form>
         )

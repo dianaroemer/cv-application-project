@@ -118,7 +118,7 @@ class App extends Component {
         }
       })
     } else if( targetType === 'personalExperience') {
-      
+
     }
   }
 
@@ -126,8 +126,18 @@ class App extends Component {
     e.preventDefault()
     console.log(`You're trying to delete a work Experience form or Education Experience form`)
     console.log(targetElement)
+    console.log(this.state[targetElement.type])
+    console.log(this.state[targetElement.type][targetElement.type + 'Arr'])
     console.log(targetElement.type)
     console.log(this.state.workExperience)
+
+    this.setState({
+      [targetElement.type]: {
+        type: targetElement.type,
+        [targetElement.type + 'Arr']: this.state[targetElement.type][targetElement.type + 'Arr'].filter(element => element !== targetElement),
+      }
+    })
+
   }
 
   render() {

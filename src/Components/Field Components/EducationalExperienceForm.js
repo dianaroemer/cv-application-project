@@ -14,7 +14,7 @@ class EducationalExperienceForm extends Component {
             // console.log(updateInputField);
             rows.push(
                 <EducationalExperienceSlot 
-                    workExperience={element}
+                    educationalExperience={element}
                     key={element.key}
                     updateInputField={updateInputField}
                     deleteExperience={deleteExperience}/>
@@ -44,6 +44,9 @@ class EducationalExperienceSlot extends Component {
     // }
 
     render() {
+
+        const {educationalExperience, updateInputField, deleteExperience} = this.props;
+
         return (
             <form className='educationExperienceSlot' style={{borderStyle: 'dotted', borderRadius: 2, borderColor: 'aqua', borderWidth: 10}}>
                 <p>I am an individual EducationExperienceSlot. There can be several or none of me, and are determined variably by state management in app!</p>
@@ -66,7 +69,7 @@ class EducationalExperienceSlot extends Component {
                 <div className='detailsFieldContainer'>
                     Additional Details: <textarea className='inputField' placeholder='First Hufflepuff to graduate in The Dark Arts'></textarea>
                 </div>
-                <button type="button"> Delete this Entry </button>
+                <button type="button" onClick={e => deleteExperience(e, educationalExperience)}> Delete this Entry </button>
                 <p></p>
             </form>
         )

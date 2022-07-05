@@ -11,10 +11,10 @@ class PreviewContainer extends Component {
 
         const personalInformation = appState.personalInformation;
         const workExperienceArr = appState.workExperience.workExperienceArr;
+        const educationalExperienceArr = appState.educationalExperience.educationalExperienceArr;
 
         let workRows = [];
-
-        workExperienceArr.map(element => {
+        workExperienceArr.forEach(element => {
             workRows.push(
                 <div className='previewWorkExperienceSlot' key={element.key}>
                     <text>Position: {element.position}</text> {'\n'}
@@ -26,6 +26,21 @@ class PreviewContainer extends Component {
                     {'\n'}
                 </div>
             )
+        })
+
+        let educationalRows = [];
+        educationalExperienceArr.forEach(element => {
+            educationalRows.push(
+                <div className='previewEducationalExperienceSlot' key={element.key}>
+                    <text>Institution: {element.institution}</text> {'\n'}
+                    <text>Degree: {element.degree}</text> {'\n'}
+                    <text>Start Date: {element.startDate}</text> {'\n'}
+                    <text>End Date: {element.endDate}</text> {'\n'}
+                    <text>Details: {element.details}</text> {'\n'}
+                    {'\n'}
+                </div>
+            )
+
         })
 
         return (
@@ -51,6 +66,7 @@ class PreviewContainer extends Component {
                 <div className='previewEducationalExperienceContainer'>
                     {'\n'} ---- Educational Experience ---- 
                     {'\n'}
+                    {educationalRows}
                 </div>
             </div>
 

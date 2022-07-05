@@ -82,7 +82,7 @@ class App extends Component {
     // console.log(`I am updateInputField, here are my passed args`);
     // console.log(e)
     // console.log(e.target.value);
-    console.log(targetParent);
+    // console.log(targetParent);
     // console.log(targetField);
     // console.log(`-------------------------------`)
 
@@ -113,7 +113,6 @@ class App extends Component {
       })
     }  
 
-    console.log(this.state)
     // console.log(this.state.workExperience.workExperienceArr[0]);
   }
 
@@ -140,7 +139,7 @@ class App extends Component {
         }
       })
     } else if( targetType === 'educationalExperience') {
-      console.log('here');
+      // console.log('here');
       this.setState({
         [targetType]: {
           type: targetType,
@@ -157,7 +156,7 @@ class App extends Component {
         }
       })
     }
-    console.log(this.state.educationalExperience)
+    // console.log(this.state.educationalExperience)
   }
 
   deleteExperience(e, targetElement) {

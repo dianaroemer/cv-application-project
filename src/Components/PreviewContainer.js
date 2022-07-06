@@ -17,10 +17,13 @@ class PreviewContainer extends Component {
         workExperienceArr.forEach(element => {
             workRows.push(
                 <div className='previewWorkSlot' key={element.key}>
-                    <text className='previewWorkPosition'>{element.position.toUpperCase()}</text> {element.startDate ? "||" : ''} {element.startDate} {element.endDate ? "to" : ''} {element.endDate} 
-                    <div className='previewWorkCompany'>{element.company} {element.location ? "||" : ''} {element.location}</div>
-
+                    <text className='previewWorkPosition'>{element.position.toUpperCase()}</text> {element.startDate ? " || " : ''} {element.startDate} {element.endDate ? "to" : ''} {element.endDate} 
+                    {/* <div className='previewWorkDates'> */}
+                    {/* </div> */}
+                    <div className='previewWorkCompany'>
+                        {element.company}{element.location ? "||" : ''}{element.location}</div>
                     <div className='previewWorkDetails'>{element.descriptionOfDuties}</div> {'\n'}
+
                 </div>
             )
         })

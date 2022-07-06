@@ -15,6 +15,7 @@ class App extends Component {
     this.updateInputField = this.updateInputField.bind(this);
     this.createExperience = this.createExperience.bind(this);
     this.deleteExperience = this.deleteExperience.bind(this);
+    this.setSampleState = this.setSampleState.bind(this);
 
     this.state = {
       personalInformation: {
@@ -156,6 +157,51 @@ class App extends Component {
     })
   }
 
+  setSampleState(e) {
+    e.preventDefault();
+    this.setState({
+      personalInformation: {
+        name : 'Dominic "D" Roemer',
+        title: 'Front-end Developer',
+        photoURL: '',
+        address: '9337 Stargaze Ave, San Diego, CA',
+        phone: 'XXX-XXX-9407',
+        email: 'dominicroemer@gmail.com',
+        linkedIn: 'www.linkedin.com/in/dominicroemer',
+        gitHub: 'https://github.com/dominicroemer',
+        type: 'personalInformation'
+      },
+      workExperience: {
+        type: 'workExperience',
+        workExperienceArr: [{
+          position: 'Esports Commentator',
+          company: 'Riot Games',
+          location: 'Los Angeles, Sydney, Shanghai',
+          startDate: '2015-01',
+          endDate: '2018-12',
+          descriptionOfDuties: 'On air commentator for LCS, LPL, and Collegiate competitive esports broadcasts',
+          key: uniqid(),
+          type: 'workExperience'
+          }, 
+        ], 
+        
+      },
+      educationalExperience: {
+        type: 'educationalExperience',
+        educationalExperienceArr: [ {
+          type: 'educationalExperience',
+          institution: 'University of California at San Diego',
+          degree: 'Computer Science, B.S.',
+          startDate: '2010-9',
+          endDate:'2014-12',
+          details: 'Studied Bioenginering for 1.5 years, Comp Sci for 2 years. Left before graduating to pursue esports commentary with Riot Games in late 2014.',
+          key: uniqid(),
+        }, 
+        ]
+      }
+    });
+  }
+
   render() {
     return (
       <div className="AppContainer" style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'blue', borderWidth: 10}}>
@@ -166,6 +212,7 @@ class App extends Component {
             updateInputField={this.updateInputField}
             createExperience={this.createExperience}
             deleteExperience={this.deleteExperience}
+            setSampleState={this.setSampleState}
             appState={this.state}/>
           <PreviewContainer appState={this.state} className='previewContainer'/>
         </div>

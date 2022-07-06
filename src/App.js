@@ -30,27 +30,16 @@ class App extends Component {
       },
       workExperience: {
         type: 'workExperience',
-        workExperienceArr: [
-          {
-            position: '1',
-            company: '',
-            location: '',
-            startDate: '',
-            endDate: '',
-            descriptionOfDuties: '',
-            key: uniqid(),
-            type: 'workExperience'
+        workExperienceArr: [{
+          position: '1',
+          company: '',
+          location: '',
+          startDate: '',
+          endDate: '',
+          descriptionOfDuties: '',
+          key: uniqid(),
+          type: 'workExperience'
           }, 
-          {
-            position: '2',
-            company: '',
-            location: '',
-            startDate: '',
-            endDate: '',
-            descriptionOfDuties: '',
-            key: uniqid(),
-            type: 'workExperience'
-          }
         ], 
         
       },
@@ -65,14 +54,6 @@ class App extends Component {
           details: '',
           key: uniqid(),
         }, 
-        {
-        type: 'educationalExperience',
-        institution: '2',
-        degree: '',
-        startDate: '',
-        endDate:'',
-        details: '',
-        key: uniqid(),}
         ]
       }
     }
@@ -186,7 +167,7 @@ class App extends Component {
             createExperience={this.createExperience}
             deleteExperience={this.deleteExperience}
             appState={this.state}/>
-          <PreviewContainer appState={this.state}/>
+          <PreviewContainer appState={this.state} className='previewContainer'/>
         </div>
       </div>
     )

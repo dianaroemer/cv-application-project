@@ -1,3 +1,18 @@
 .content {
   display: flex;
+  /* gap: 15px; */
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+.FormContainer {
+  width: 50%;
+}
+
+.previewContainer {
+  display: block;
+  height: 870px;
+  width: 672px;
+  padding: 20px;
 }

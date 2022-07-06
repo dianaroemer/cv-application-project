@@ -16,14 +16,11 @@ class PreviewContainer extends Component {
         let workRows = [];
         workExperienceArr.forEach(element => {
             workRows.push(
-                <div className='previewWorkExperienceSlot' key={element.key}>
-                    <text>Position: {element.position}</text> {'\n'}
-                    <text>Company: {element.company}</text> {'\n'}
-                    <text>Location: {element.location}</text> {'\n'}
-                    <text>Start Date: {element.startDate}</text> {'\n'}
-                    <text>End Date: {element.endDate}</text> {'\n'}
-                    <text>Description of Duties: {element.descriptionOfDuties}</text> {'\n'}
-                    {'\n'}
+                <div className='previewWorkSlot' key={element.key}>
+                    <text className='previewWorkPosition'>{element.position.toUpperCase()}</text> {element.startDate ? "||" : ''} {element.startDate} {element.endDate ? "to" : ''} {element.endDate} 
+                    <div className='previewWorkCompany'>{element.company} {element.location ? "||" : ''} {element.location}</div>
+
+                    <div className='previewWorkDetails'>{element.descriptionOfDuties}</div> {'\n'}
                 </div>
             )
         })
@@ -67,19 +64,30 @@ class PreviewContainer extends Component {
                         {personalInformation.address}
                     </div>
                     <div className='previewPersonalPhoneEmail'>
-                        {personalInformation.email} {personalInformation.phone ? '||' : ''} {personalInformation.phone}
+                        {personalInformation.email ? <a href={"mailto:" + personalInformation.email}> {personalInformation.email} </a> : ''}
+                        
+                        {personalInformation.phone ? ' || ' : ''} 
+                        {personalInformation.phone}
                     </div>
                     <div className='previewPersonalLinks'>
-                        {personalInformation.linkedIn} {personalInformation.gitHub ? '||' : ''} {personalInformation.gitHub}
+                        <a href={personalInformation.linkedIn}>{personalInformation.linkedIn}</a>
+                         {personalInformation.gitHub ? '  ||  ' : ''}
+                         <a href={personalInformation.gitHub}>{personalInformation.gitHub}</a>
                     </div>
                     <div className='previewPersonalDivider'>- - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </div>
 
                 </div>
-                <div className='previewWorkExperienceContainer'>
+                {/* <div className='previewWorkExperienceContainer'>
                     {'\n'} ----- Work Experience ----- 
                     {'\n'}
                     {workRows}
-                </div>
+                </div> */}
+                {workRows[0] ? (<div className='previewWorkContainer'>
+                    <div className='previewWorkHeaderText'>
+                        Work Experience
+                    </div>
+                    {workRows}
+                </div>) : ''}
                 <div className='previewEducationalExperienceContainer'>
                     {'\n'} ---- Educational Experience ---- 
                     {'\n'}

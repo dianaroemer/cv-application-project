@@ -32,7 +32,7 @@ class App extends Component {
       workExperience: {
         type: 'workExperience',
         workExperienceArr: [{
-          position: '1',
+          position: '',
           company: '',
           location: '',
           startDate: '',
@@ -108,7 +108,7 @@ class App extends Component {
         [targetType]: {
           type: targetType,
           [targetType + 'Arr']: this.state[targetType][targetType + 'Arr'].concat([{
-              position: '3',
+              position: '',
               company: '',
               location: '',
               startDate: '',
@@ -127,7 +127,7 @@ class App extends Component {
           type: targetType,
           [targetType + 'Arr']: this.state[targetType][targetType + 'Arr'].concat([{
               type: 'educationalExperience',
-              institution: '3',
+              institution: '',
               degree: '',
               startDate: '',
               endDate: '',
@@ -175,8 +175,8 @@ class App extends Component {
         type: 'workExperience',
         workExperienceArr: [{
           position: 'Esports Commentator',
-          company: 'Riot Games',
-          location: 'Los Angeles, Sydney, Shanghai',
+          company: 'Riot Games, Video Game Company',
+          location: 'Los Angeles, USA, Sydney, AUS, and Shanghai, CN',
           startDate: '2015-01',
           endDate: '2018-12',
           descriptionOfDuties: 'On air commentator for LCS, LPL, and Collegiate competitive esports broadcasts. Required in depth knowledge of game, mechanics, players, and competitive narrative, communicated in on-the-fly action.',

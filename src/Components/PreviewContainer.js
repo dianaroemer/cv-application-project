@@ -47,16 +47,32 @@ class PreviewContainer extends Component {
 
             <div className='previewContainer' style={{borderStyle: 'solid', borderRadius: 2, borderWidth: 10, borderColor: 'red', whiteSpace: 'pre-wrap'}}>
 
-                <h3>I am PreviewContainer.js. Eventually, I will show the output of state from App.js.</h3>
+                {/* <h3>I am PreviewContainer.js. Eventually, I will show the output of state from App.js.</h3> */}
                 <div className='previewPersonal'>
-                    Name: {personalInformation.name} {'\n'}
+                    {/* Name: {personalInformation.name} {'\n'}
                     Title: {personalInformation.title} {'\n'}
                     Photo URL: {personalInformation.photoURL} {'\n'}
                     Address: {personalInformation.address} {'\n'}
                     Phone #: {personalInformation.phone} {'\n'}
                     Email: {personalInformation.email} {'\n'}
                     LinkedIn: {personalInformation.linkedIn} {'\n'}
-                    GitHub: {personalInformation.gitHub} {'\n'}
+                    GitHub: {personalInformation.gitHub} {'\n'} */}
+                    <div className='previewPersonalName'>
+                        {personalInformation.name}
+                    </div>
+                    <div className='previewPersonalTitle'>
+                        {personalInformation.title}
+                    </div>
+                    <div className='previewPersonalAddress'>
+                        {personalInformation.address}
+                    </div>
+                    <div className='previewPersonalPhoneEmail'>
+                        {personalInformation.email} {personalInformation.phone ? '||' : ''} {personalInformation.phone}
+                    </div>
+                    <div className='previewPersonalLinks'>
+                        {personalInformation.linkedIn} {personalInformation.gitHub ? '||' : ''} {personalInformation.gitHub}
+                    </div>
+
                 </div>
                 <div className='previewWorkExperienceContainer'>
                     {'\n'} ----- Work Experience ----- 

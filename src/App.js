@@ -167,8 +167,8 @@ class App extends Component {
         address: '9337 Stargaze Ave, San Diego, CA',
         phone: 'XXX-XXX-9407',
         email: 'dominicroemer@gmail.com',
-        linkedIn: 'www.linkedin.com/in/dominicroemer',
-        gitHub: 'https://github.com/dominicroemer',
+        linkedIn: 'linkedin.com/in/dominicroemer',
+        gitHub: 'github.com/dominicroemer',
         type: 'personalInformation'
       },
       workExperience: {
@@ -179,7 +179,7 @@ class App extends Component {
           location: 'Los Angeles, Sydney, Shanghai',
           startDate: '2015-01',
           endDate: '2018-12',
-          descriptionOfDuties: 'On air commentator for LCS, LPL, and Collegiate competitive esports broadcasts',
+          descriptionOfDuties: 'On air commentator for LCS, LPL, and Collegiate competitive esports broadcasts. Required in depth knowledge of game, mechanics, players, and competitive narrative, communicated in on-the-fly action.',
           key: uniqid(),
           type: 'workExperience'
           }, 

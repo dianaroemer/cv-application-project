@@ -45,7 +45,7 @@ class PreviewContainer extends Component {
 
         return (
 
-            <div className='previewContainer' style={{borderStyle: 'solid', borderRadius: 2, borderWidth: 10, borderColor: 'red', whiteSpace: 'pre-wrap'}}>
+            <div className='previewContainer' style={{borderStyle: 'solid', borderRadius: 3, borderWidth: 1, borderColor: 'lightgrey', whiteSpace: 'pre-wrap'}}>
 
                 {/* <h3>I am PreviewContainer.js. Eventually, I will show the output of state from App.js.</h3> */}
                 <div className='previewPersonal'>
@@ -72,6 +72,7 @@ class PreviewContainer extends Component {
                     <div className='previewPersonalLinks'>
                         {personalInformation.linkedIn} {personalInformation.gitHub ? '||' : ''} {personalInformation.gitHub}
                     </div>
+                    <div className='previewPersonalDivider'>- - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </div>
 
                 </div>
                 <div className='previewWorkExperienceContainer'>

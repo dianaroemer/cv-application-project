@@ -44,6 +44,9 @@ class App extends Component {
         ], 
         
       },
+      skill: [
+        {skill: 'test skill', key: uniqid()},
+      ],
       educationalExperience: {
         type: 'educationalExperience',
         educationalExperienceArr: [ {

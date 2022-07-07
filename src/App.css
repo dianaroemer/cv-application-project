@@ -11,6 +11,7 @@
   justify-content: space-around;
   height: 100%;
   width: 100%;
+  background-color: bisque;
 }
 
 .FormContainer {
@@ -27,7 +28,7 @@
 /* ------------ Styling for previewPane ------------ */
 
 .previewContainer {
-  margin-top: 5px;
+  margin-top: 20px;
   display: block;
   font-family: 'Lato';
   height: 870px;
@@ -35,18 +36,20 @@
   padding: 30px;
   padding-left: 50px;
   padding-right: 50px;
-  box-shadow: 3px 5px 10px grey
+  box-shadow: 3px 3px 10px grey;
+  background-color: white;
 }
 
 .previewPersonal {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
 }
 
 .previewPersonalName {
   color: teal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: xx-large;
 }
 
@@ -62,11 +65,8 @@
   color:lightgrey;
 }
 
-.previewWorkContainer {
 
-}
-
-.previewWorkHeaderText {
+.previewHeaderText {
   font-weight: 600;
   font-size: larger;
   color:rgb(0, 87, 87);
@@ -82,15 +82,29 @@
 }
 
 .previewWorkCompany {
-  font-weight: 500
+  font-weight: 600;
 }
 
 .previewWorkDetails {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
+.previewEducationalExperienceSlot{
+  margin-left: 25px;
+}
 
+.previewEducationInstitution {
+  font-weight: 600;
+}
 
+.previewEducationDates {
+  margin-left: 25px;
+  font-weight: 600;
+}
+
+.previewEducationDetails {
+  margin-left: 25px;
+}
 
 
 

@@ -17,11 +17,11 @@ class PreviewContainer extends Component {
         workExperienceArr.forEach(element => {
             workRows.push(
                 <div className='previewWorkSlot' key={element.key}>
-                    <text className='previewWorkPosition'>{element.position.toUpperCase()}</text> {element.startDate ? " || " : ''} {element.startDate} {element.endDate ? "to" : ''} {element.endDate} 
+                    <text className='previewWorkPosition'>{element.position.toUpperCase()}</text> {element.startDate ? "  ||  " : ''} {element.startDate} {element.endDate ? "to" : ''} {element.endDate} 
                     {/* <div className='previewWorkDates'> */}
                     {/* </div> */}
                     <div className='previewWorkCompany'>
-                        {element.company}{element.location ? "||" : ''}{element.location}</div>
+                        {element.company}{element.location ? "  ||  " : ''}{element.location}</div>
                     <div className='previewWorkDetails'>{element.descriptionOfDuties}</div> {'\n'}
 
                 </div>
@@ -32,12 +32,12 @@ class PreviewContainer extends Component {
         educationalExperienceArr.forEach(element => {
             educationalRows.push(
                 <div className='previewEducationalExperienceSlot' key={element.key}>
-                    <text>Institution: {element.institution}</text> {'\n'}
-                    <text>Degree: {element.degree}</text> {'\n'}
-                    <text>Start Date: {element.startDate}</text> {'\n'}
-                    <text>End Date: {element.endDate}</text> {'\n'}
-                    <text>Details: {element.details}</text> {'\n'}
-                    {'\n'}
+
+                    <text className='previewEducationInstitution'>{element.institution}</text> {element.degree ? " || " : ""} {element.degree} <div></div>
+                    <div className='previewEducationDates'>
+                    {element.startDate} {element.endDate ? "to" : ''} {element.endDate} 
+                    </div>
+                    <div className='previewEducationDetails'>{element.details}</div>
                 </div>
             )
 
@@ -86,16 +86,24 @@ class PreviewContainer extends Component {
                     {workRows}
                 </div> */}
                 {workRows[0] ? (<div className='previewWorkContainer'>
-                    <div className='previewWorkHeaderText'>
+                    <div className='previewHeaderText'>
                         Work Experience
                     </div>
                     {workRows}
                 </div>) : ''}
-                <div className='previewEducationalExperienceContainer'>
+
+                {educationalRows[0] ? (<div className='previewEducationalContainer'>
+                    <div className='previewHeaderText'>
+                        Educational Experience
+                    </div>
+                    {educationalRows}
+                </div>) : ''}
+
+                {/* <div className='previewEducationalExperienceContainer'>
                     {'\n'} ---- Educational Experience ---- 
                     {'\n'}
                     {educationalRows}
-                </div>
+                </div> */}
             </div>
 
         )

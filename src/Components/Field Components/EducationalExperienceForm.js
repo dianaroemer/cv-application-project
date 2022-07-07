@@ -60,7 +60,7 @@ class EducationalExperienceSlot extends Component {
                     </input>
                 </div>
                 <div className='startDateFieldContainer'>
-                    Start Date: <input className="inputField" type="month"   onChange={e => updateInputField(e, educationalExperience, 'startDate')} value={educationalExperience.startDate}></input>
+                    Start Datey: <input className="inputField" type="month"   onChange={e => updateInputField(e, educationalExperience, 'startDate')} value={educationalExperience.startDate}></input>
                 </div>
                 <div className='endDateFieldContainer'>
                     End Date: <input className="inputField" type="month"  onChange={e => updateInputField(e, educationalExperience, 'endDate')} value={educationalExperience.endDate}></input>

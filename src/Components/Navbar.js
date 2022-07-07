@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Styling/NavbarStyle.css'
 
 class Navbar extends Component {
     // constructor(props) {
@@ -8,7 +9,7 @@ class Navbar extends Component {
     render() {
 
         return (
-            <div className='navbarContainer' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'orange', borderWidth: 10}}>
+            <div className='navbarContainer' >
                 <h3>I am Navbar.js. Build me.</h3>
             </div>
         )

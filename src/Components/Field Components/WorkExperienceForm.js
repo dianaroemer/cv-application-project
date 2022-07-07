@@ -28,7 +28,7 @@ class WorkExperienceForm extends Component {
                 {rows}
             
             <p></p>
-            <button type="submit" onClick={e => createExperience(e,elementType)}>Add More Work Experience</button>
+            <button type="submit" onClick={e => createExperience(e,elementType)}>Add Work Experience</button>
             <p></p>
         </div>
         )
@@ -66,7 +66,7 @@ class WorkExperienceSlot extends Component {
                 </div>
 
                 <div className='descriptionFieldContainer'>
-                    Description of Duties: <textarea className='inputField' placeholder='Kept workspace free of filth Rebel scum, organized weekly Stormtrooper Socials' onChange={e => updateInputField(e, workExperience, 'descriptionOfDuties')} value={workExperience.descriptionOfDuties}></textarea>
+                    Description of Duties: <textarea className='inputField' placeholder='Kept workspace free of filthy Rebel scum, organized weekly Stormtrooper Socials' onChange={e => updateInputField(e, workExperience, 'descriptionOfDuties')} value={workExperience.descriptionOfDuties}></textarea>
                 </div>
 
                 <button type="button" onClick={e => deleteExperience(e, workExperience)}> Delete this Entry </button>

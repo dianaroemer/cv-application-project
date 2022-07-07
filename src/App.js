@@ -44,8 +44,8 @@ class App extends Component {
         ], 
         
       },
-      skill: [
-        {skill: 'test skill', key: uniqid()},
+      skillArr: [
+        {skill: 'TESTFOOBARSKILL', key: uniqid(), type: 'skill'},
       ],
       educationalExperience: {
         type: 'educationalExperience',
@@ -139,6 +139,15 @@ class App extends Component {
             }, 
           ])
         }
+      })
+    } else if(targetType === 'skill') {
+      console.log('here');
+      this.setState({
+        skillArr: this.state.skillArr.concat({
+          type: 'skill',
+          key: uniqid(),
+          skill: 'I AM A NEW SKILL, FEAR ME'
+        })
       })
     }
     // console.log(this.state.educationalExperience)

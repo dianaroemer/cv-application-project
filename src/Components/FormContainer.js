@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 // import FormElement from './FormElement';
 import PersonalInformationForm from './Field Components/PersonalInformationForm';
 import WorkExperienceForm from './Field Components/WorkExperienceForm'
+import SkillForm from './Field Components/SkillForm'
 import EducationalExperienceForm from './Field Components/EducationalExperienceForm';
 
 
@@ -26,6 +27,10 @@ class FormContainer extends Component {
                     updateInputField={updateInputField}
                     createExperience={createExperience}
                     deleteExperience={deleteExperience}/>
+                
+                <SkillForm skillArr={appState.skillArr}
+                createExperience={createExperience}/>
+                
                 <EducationalExperienceForm
                     educationalExperienceArr={appState.educationalExperience.educationalExperienceArr}
                     elementType={appState.educationalExperience.type}

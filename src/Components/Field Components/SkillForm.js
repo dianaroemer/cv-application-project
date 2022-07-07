@@ -46,7 +46,7 @@ class SkillSlot extends Component {
         return (
             <form className='skillForm'>
                 I am an individiaul Skill Slot. My value is
-                <div>{skill.skill} and my type is {skill.type}</div>
+                <input className="inputField" placeholder='A New Skill'  onChange={e => e.preventDefault()} value={skill.skill}></input>
                 <button type='submit' onClick={e=> e.preventDefault()}>Edit</button>
                 <button type='submit' onClick={e=> deleteExperience(e, skill)}>Delete</button>
             </form>

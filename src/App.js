@@ -45,7 +45,7 @@ class App extends Component {
         
       },
       skillArr: [
-        {skill: 'TESTFOOBARSKILL', key: uniqid(), type: 'skill'},
+        {skill: 'TESTFOOBARSKILL', key: uniqid(), type: 'skill', edit: false},
       ],
       educationalExperience: {
         type: 'educationalExperience',
@@ -146,7 +146,8 @@ class App extends Component {
         skillArr: this.state.skillArr.concat({
           type: 'skill',
           key: uniqid(),
-          skill: 'I AM A NEW SKILL, FEAR ME'
+          skill: 'I AM A NEW SKILL, FEAR ME',
+          edit: false,
         })
       })
     }
@@ -222,9 +223,14 @@ class App extends Component {
             key: uniqid(),
             type: 'workExperience'
           },
-    ], 
+        ], 
         
-      },
+      }, 
+      skillArr: [
+        {skill: 'Javascript, HTML, CSS', key: uniqid(), type: 'skill', edit: false},
+     
+
+      ],
       educationalExperience: {
         type: 'educationalExperience',
         educationalExperienceArr: [ {

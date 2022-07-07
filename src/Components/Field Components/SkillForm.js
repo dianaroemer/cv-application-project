@@ -7,13 +7,14 @@ class SkillForm extends Component {
 
     render() {
 
-        const {skillArr, createExperience} = this.props;
+        const {skillArr, createExperience, deleteExperience} = this.props;
 
         const skillRows = [];
 
         skillArr.forEach(element => {
             skillRows.push(
-                <SkillSlot skill={element}/>
+                <SkillSlot skill={element}
+                deleteExperience={deleteExperience}/>
             )
         })
         
@@ -40,14 +41,14 @@ class SkillSlot extends Component {
 
     render() {
 
-        const { skill } = this.props;
+        const { skill, deleteExperience } = this.props;
 
         return (
             <form className='skillForm'>
                 I am an individiaul Skill Slot. My value is
                 <div>{skill.skill} and my type is {skill.type}</div>
                 <button type='submit' onClick={e=> e.preventDefault()}>Edit</button>
-                <button type='submit' onClick={e=> e.preventDefault()}>Delete</button>
+                <button type='submit' onClick={e=> deleteExperience(e, skill)}>Delete</button>
             </form>
         )
     }

@@ -161,12 +161,21 @@ class App extends Component {
     // console.log(this.state[targetElement.type][targetElement.type + 'Arr'])
     // console.log(targetElement.type)
     // console.log(this.state.workExperience)
-    this.setState({
-      [targetElement.type]: {
-        type: targetElement.type,
-        [targetElement.type + 'Arr']: this.state[targetElement.type][targetElement.type + 'Arr'].filter(element => element !== targetElement),
-      }
-    })
+
+    // This if statement is my second attempt at re-writing variable skill elements, instead of containing the array inside an object, I'm just keeping the array as the state property itself, without a shell object that only contains type. 
+    if(targetElement.type === 'skill'){
+      this.setState({
+        skillArr: this.state.skillArr.filter(element => element !== targetElement)
+      })
+    } else { // This else statement is used for deleting elements in the format of workExperience and educationExperience
+      this.setState({
+        [targetElement.type]: {
+          type: targetElement.type,
+          [targetElement.type + 'Arr']: this.state[targetElement.type][targetElement.type + 'Arr'].filter(element => element !== targetElement),
+        }
+      })
+    }
+
   }
 
   setSampleState(e) {

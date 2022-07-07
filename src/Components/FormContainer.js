@@ -29,7 +29,8 @@ class FormContainer extends Component {
                     deleteExperience={deleteExperience}/>
                 
                 <SkillForm skillArr={appState.skillArr}
-                createExperience={createExperience}/>
+                createExperience={createExperience}
+                deleteExperience={deleteExperience}/>
                 
                 <EducationalExperienceForm
                     educationalExperienceArr={appState.educationalExperience.educationalExperienceArr}

@@ -45,7 +45,7 @@ class App extends Component {
         
       },
       skillArr: [
-        {skill: 'TESTFOOBARSKILL', key: uniqid(), type: 'skill', edit: false},
+        {skill: 'TESTFOOBARSKILL', key: uniqid(), type: 'skill', edit: true},
       ],
       educationalExperience: {
         type: 'educationalExperience',
@@ -228,7 +228,7 @@ class App extends Component {
       }, 
       skillArr: [
         {skill: 'Javascript, HTML, CSS', key: uniqid(), type: 'skill', edit: false},
-     
+    
 
       ],
       educationalExperience: {

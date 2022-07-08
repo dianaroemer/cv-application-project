@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash, faPenToSquare, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
+
+
 
 class SkillForm extends Component {
     constructor(props) {
@@ -43,12 +47,26 @@ class SkillSlot extends Component {
 
         const { skill, deleteExperience } = this.props;
 
+        if(skill.edit) {
+            return (
+                <form className='skillEditForm'>
+                    I am an editing skill form, my values are as follows.
+                    <input className="inputField" placeholder='A New Skill'  onChange={e => e.preventDefault()} value={skill.skill}></input>
+
+                    <FontAwesomeIcon icon={faCircleCheck} onClick={(e) => e.preventDefault()}/>
+                    <FontAwesomeIcon icon={faTrash} onClick={e=> deleteExperience(e, skill)} />
+
+                </form>
+            );
+        }
+
         return (
             <form className='skillForm'>
-                I am an individiaul Skill Slot. My value is
-                <input className="inputField" placeholder='A New Skill'  onChange={e => e.preventDefault()} value={skill.skill}></input>
-                <button type='submit' onClick={e=> e.preventDefault()}>Edit</button>
-                <button type='submit' onClick={e=> deleteExperience(e, skill)}>Delete</button>
+                I am an individiaul Skill Slot. My value is <div></div>
+                {skill.skill} and my type is {skill.type} and my edit is {skill.edit}
+                <FontAwesomeIcon icon={faPenToSquare} onClick={(e) => e.preventDefault()}/>
+                <FontAwesomeIcon icon={faTrash} onClick={e=> deleteExperience(e, skill)} />
+
             </form>
         )
     }

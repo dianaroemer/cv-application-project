@@ -89,6 +89,13 @@
   margin-left: 25px;
 }
 
+.previewSkillList {
+  margin-top: 0px;
+  /* margin-bottom: 0px; */
+  display: grid;
+  grid-template-columns: 300px 450px;
+}
+
 .previewEducationalExperienceSlot{
   margin-left: 25px;
 }

@@ -54,7 +54,7 @@ class SkillSlot extends Component {
                     <input type="text" className="inputField" placeholder="Shooting womp rats in Beggar's Canyon"  
                         onChange={e => updateInputField(e, skill, skill)} 
                         onKeyDown={e=> {
-                            e.preventDefault()
+                            // e.preventDefault()
                             if(e.key === "Enter"){
                                 toggleSkillEdit(e, skill);
                             }

@@ -245,7 +245,9 @@ class App extends Component {
       }, 
       skillArr: [
         {skill: 'Javascript, HTML, CSS', key: uniqid(), type: 'skill', edit: false},
-    
+        {skill: 'React', key: uniqid(), type: 'skill', edit: false},
+        {skill: 'Git and Github', key: uniqid(), type: 'skill', edit: false},
+        {skill: 'Excellent Public Speaker', key: uniqid(), type: 'skill', edit: false},
 
       ],
       educationalExperience: {

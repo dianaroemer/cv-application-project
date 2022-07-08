@@ -12,7 +12,7 @@ class FormContainer extends Component {
     // }
 
     render() {
-        const { updateInputField, appState, createExperience, deleteExperience, setSampleState } = this.props;
+        const { updateInputField, appState, createExperience, deleteExperience, toggleSkillEdit, setSampleState } = this.props;
 
 
         return (
@@ -30,7 +30,9 @@ class FormContainer extends Component {
                 
                 <SkillForm skillArr={appState.skillArr}
                 createExperience={createExperience}
-                deleteExperience={deleteExperience}/>
+                deleteExperience={deleteExperience}
+                toggleSkillEdit={toggleSkillEdit}
+                updateInputField={updateInputField}/>
                 
                 <EducationalExperienceForm
                     educationalExperienceArr={appState.educationalExperience.educationalExperienceArr}

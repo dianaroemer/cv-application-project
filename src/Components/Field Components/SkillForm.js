@@ -11,13 +11,15 @@ class SkillForm extends Component {
 
     render() {
 
-        const {skillArr, createExperience, deleteExperience} = this.props;
+        const {skillArr, updateInputField, createExperience, deleteExperience, toggleSkillEdit } = this.props;
 
         const skillRows = [];
 
         skillArr.forEach(element => {
             skillRows.push(
                 <SkillSlot skill={element}
+                updateInputField={updateInputField}
+                toggleSkillEdit={toggleSkillEdit}
                 deleteExperience={deleteExperience}/>
             )
         })
@@ -45,15 +47,15 @@ class SkillSlot extends Component {
 
     render() {
 
-        const { skill, deleteExperience } = this.props;
+        const { skill, updateInputField, toggleSkillEdit, deleteExperience } = this.props;
 
         if(skill.edit) {
             return (
                 <form className='skillEditForm'>
                     I am an editing skill form, my values are as follows.
-                    <input className="inputField" placeholder='A New Skill'  onChange={e => e.preventDefault()} value={skill.skill}></input>
+                    <input className="inputField" placeholder='A New Skill'  onChange={e => updateInputField(e, skill, skill)} value={skill.skill}></input>
 
-                    <FontAwesomeIcon icon={faCircleCheck} onClick={(e) => e.preventDefault()}/>
+                    <FontAwesomeIcon icon={faCircleCheck} onClick={(e) => toggleSkillEdit(e, skill)}/>
                     <FontAwesomeIcon icon={faTrash} onClick={e=> deleteExperience(e, skill)} />
 
                 </form>
@@ -64,7 +66,7 @@ class SkillSlot extends Component {
             <form className='skillForm'>
                 I am an individiaul Skill Slot. My value is <div></div>
                 {skill.skill} and my type is {skill.type} and my edit is {skill.edit}
-                <FontAwesomeIcon icon={faPenToSquare} onClick={(e) => e.preventDefault()}/>
+                <FontAwesomeIcon icon={faPenToSquare} onClick={(e) => toggleSkillEdit(e, skill)}/>
                 <FontAwesomeIcon icon={faTrash} onClick={e=> deleteExperience(e, skill)} />
 
             </form>

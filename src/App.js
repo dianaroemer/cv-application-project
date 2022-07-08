@@ -16,6 +16,7 @@ class App extends Component {
     this.createExperience = this.createExperience.bind(this);
     this.deleteExperience = this.deleteExperience.bind(this);
     this.setSampleState = this.setSampleState.bind(this);
+    this.toggleSkillEdit = this.toggleSkillEdit.bind(this);
 
     this.state = {
       personalInformation: {
@@ -96,7 +97,21 @@ class App extends Component {
           }),
         }
       })
-    }  
+    } else if (targetField.type === 'skill') {
+      console.log('Editing a skill value');
+      this.setState({
+        skillArr: this.state.skillArr.map(element => {
+          if(element === targetField){
+            return {
+              ...targetField,
+              skill: e.target.value,
+            }
+          } else {
+            return element;
+          }
+        })
+      })
+    }
 
     // console.log(this.state.workExperience.workExperienceArr[0]);
   }
@@ -247,6 +262,21 @@ class App extends Component {
     });
   }
 
+  toggleSkillEdit(e, targetSkill) {
+    e.preventDefault();
+
+    this.setState({
+      skillArr: this.state.skillArr.map(element => {
+        if(element===targetSkill){
+          return {...targetSkill,
+          edit: !targetSkill.edit}
+        } else {
+          return element;
+        }
+      })
+    })
+  };
+
   render() {
     return (
       <div className="AppContainer" style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'blue', borderWidth: 10}}>
@@ -258,6 +288,7 @@ class App extends Component {
             createExperience={this.createExperience}
             deleteExperience={this.deleteExperience}
             setSampleState={this.setSampleState}
+            toggleSkillEdit={this.toggleSkillEdit}
             appState={this.state}/>
           <PreviewContainer appState={this.state} className='previewContainer'/>
         </div>

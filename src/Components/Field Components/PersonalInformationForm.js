@@ -21,7 +21,7 @@ class PersonalInformationForm extends Component {
                 </div>
                 <div className='photoFieldContainer'>
                     Photo URL: <input className="inputField" type="url" placeholder='ttps://giphy.com/embed/BzyTuYCmvSORqs1ABM' onChange={e => updateInputField(e, personalInformation, 'photoURL')} value={personalInformation.photoURL}></input>
-                    <button type="button">Get Photo</button>
+                    <button type="button">Get Photo (not implemented yet)</button>
                 </div>
                 <div className='addressFieldContainer'>
                     Address: <input className="inputField" type="text" placeholder='137 Trench Run, Death Star' onChange={e => updateInputField(e, personalInformation, 'address')} value={personalInformation.address}></input>

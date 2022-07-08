@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faBullseye, faCircleDot, faCircle, faCircleArrowRight, faCircleRight } from '@fortawesome/free-solid-svg-icons'
 
 class PreviewContainer extends Component {
     // constructor(props){
@@ -21,8 +19,6 @@ class PreviewContainer extends Component {
             workRows.push(
                 <div className='previewWorkSlot' key={element.key}>
                     <text className='previewWorkPosition'>{element.position.toUpperCase()}</text> {element.startDate ? "  ||  " : ''} {element.startDate} {element.endDate ? "to" : ''} {element.endDate} 
-                    {/* <div className='previewWorkDates'> */}
-                    {/* </div> */}
                     <div className='previewWorkCompany'>
                         {element.company}{element.location ? "  ||  " : ''}{element.location}</div>
                     <div className='previewWorkDetails'>{element.descriptionOfDuties}</div> {'\n'}
@@ -60,16 +56,7 @@ class PreviewContainer extends Component {
 
             <div className='previewContainer' style={{borderStyle: 'solid', borderRadius: 3, borderWidth: 1, borderColor: 'lightgrey', whiteSpace: 'pre-wrap'}}>
 
-                {/* <h3>I am PreviewContainer.js. Eventually, I will show the output of state from App.js.</h3> */}
                 <div className='previewPersonal'>
-                    {/* Name: {personalInformation.name} {'\n'}
-                    Title: {personalInformation.title} {'\n'}
-                    Photo URL: {personalInformation.photoURL} {'\n'}
-                    Address: {personalInformation.address} {'\n'}
-                    Phone #: {personalInformation.phone} {'\n'}
-                    Email: {personalInformation.email} {'\n'}
-                    LinkedIn: {personalInformation.linkedIn} {'\n'}
-                    GitHub: {personalInformation.gitHub} {'\n'} */}
                     <div className='previewPersonalName'>
                         {personalInformation.name}
                     </div>
@@ -93,11 +80,6 @@ class PreviewContainer extends Component {
                     <div className='previewPersonalDivider'>- - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </div>
 
                 </div>
-                {/* <div className='previewWorkExperienceContainer'>
-                    {'\n'} ----- Work Experience ----- 
-                    {'\n'}
-                    {workRows}
-                </div> */}
                 {workRows[0] ? (<div className='previewWorkContainer'>
                     <div className='previewHeaderText'>
                         Work Experience
@@ -121,11 +103,6 @@ class PreviewContainer extends Component {
                     {educationalRows}
                 </div>) : ''}
 
-                {/* <div className='previewEducationalExperienceContainer'>
-                    {'\n'} ---- Educational Experience ---- 
-                    {'\n'}
-                    {educationalRows}
-                </div> */}
             </div>
 
         )

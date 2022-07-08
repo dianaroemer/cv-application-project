@@ -5,9 +5,6 @@ import { faTrash, faPenToSquare, faCircleCheck } from '@fortawesome/free-solid-s
 
 
 class SkillForm extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
 
@@ -28,7 +25,7 @@ class SkillForm extends Component {
 
         return (
             <div className='SkillForm' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'red', borderWidth: 10}}>
-                <div className='skillsHeaderText'>Skills</div>
+                <h3 className='skillsHeaderText'>Skills</h3>
                 {skillRows}
                 
             <button type="submit" onClick={e => createExperience(e, 'skill')}>Add Another Skill</button>
@@ -40,9 +37,9 @@ class SkillForm extends Component {
 
 class SkillSlot extends Component {
 
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
 
@@ -54,7 +51,6 @@ class SkillSlot extends Component {
                     <input type="text" className="inputField" placeholder="Shooting womp rats in Beggar's Canyon"  
                         onChange={e => updateInputField(e, skill, skill)} 
                         onKeyDown={e=> {
-                            // e.preventDefault()
                             if(e.key === "Enter"){
                                 toggleSkillEdit(e, skill);
                             }
@@ -81,13 +77,3 @@ class SkillSlot extends Component {
 }
 
 export default SkillForm;
-
-/* 
---- Work Experience(VARIABLE, ADD AND DELETE THESE FORM FIELDS) ---
-Position:
-Company:
-City:
-Start Date:
-End Date:? (maybe set this is a duration sort of thing?)
-Short description:
-*/

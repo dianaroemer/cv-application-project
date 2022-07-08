@@ -283,7 +283,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="AppContainer" style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'blue', borderWidth: 10}}>
+      <div className="AppContainer">
         {/* <h2>I am App.js, my parent is AppContainer. Would you like to develop an App?</h2> */}
         <Navbar/>
         <div className='content' >

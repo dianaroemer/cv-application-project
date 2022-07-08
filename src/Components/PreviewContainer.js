@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight, faBullseye, faCircleDot, faCircle, faCircleArrowRight, faCircleRight } from '@fortawesome/free-solid-svg-icons'
 
 class PreviewContainer extends Component {
     // constructor(props){
@@ -11,6 +13,7 @@ class PreviewContainer extends Component {
 
         const personalInformation = appState.personalInformation;
         const workExperienceArr = appState.workExperience.workExperienceArr;
+        const skillArr = appState.skillArr;
         const educationalExperienceArr = appState.educationalExperience.educationalExperienceArr;
 
         let workRows = [];
@@ -27,6 +30,16 @@ class PreviewContainer extends Component {
                 </div>
             )
         })
+
+        let skillRows = []
+        skillArr.forEach(element => {
+            skillRows.push(
+                <li className='previewSkillSlot' key={element.key}>
+                    {element.skill}
+                </li>
+            )
+        })
+
 
         let educationalRows = [];
         educationalExperienceArr.forEach(element => {
@@ -90,6 +103,15 @@ class PreviewContainer extends Component {
                         Work Experience
                     </div>
                     {workRows}
+                </div>) : ''}
+
+                {skillRows[0] ? (<div className='previewSkillContainer'>
+                    <div className='previewHeaderText'>
+                        Skills
+                        </div>
+                        <ul className='previewSkillList'>
+                        {skillRows}
+                        </ul>
                 </div>) : ''}
 
                 {educationalRows[0] ? (<div className='previewEducationalContainer'>

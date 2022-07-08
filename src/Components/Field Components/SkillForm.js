@@ -20,18 +20,17 @@ class SkillForm extends Component {
                 <SkillSlot skill={element}
                 updateInputField={updateInputField}
                 toggleSkillEdit={toggleSkillEdit}
-                deleteExperience={deleteExperience}/>
+                deleteExperience={deleteExperience}
+                key={element.key}/>
             )
         })
         
 
         return (
             <div className='SkillForm' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'red', borderWidth: 10}}>
-                <h3>I am SkillForm.js. I hold an array, containing a variable number of skillObjects, each of which contain an individual skill, a unique key, and an identifying type</h3>
+                <div className='skillsHeaderText'>Skills</div>
                 {skillRows}
                 
-            
-            <p></p>
             <button type="submit" onClick={e => createExperience(e, 'skill')}>Add Another Skill</button>
             <p></p>
         </div>
@@ -52,8 +51,15 @@ class SkillSlot extends Component {
         if(skill.edit) {
             return (
                 <form className='skillEditForm'>
-                    I am an editing skill form, my values are as follows.
-                    <input className="inputField" placeholder='A New Skill'  onChange={e => updateInputField(e, skill, skill)} value={skill.skill}></input>
+                    <input type="text" className="inputField" placeholder="Shooting womp rats in Beggar's Canyon"  
+                        onChange={e => updateInputField(e, skill, skill)} 
+                        onKeyDown={e=> {
+                            e.preventDefault()
+                            if(e.key === "Enter"){
+                                toggleSkillEdit(e, skill);
+                            }
+                        }}
+                        value={skill.skill}></input>
 
                     <FontAwesomeIcon icon={faCircleCheck} onClick={(e) => toggleSkillEdit(e, skill)}/>
                     <FontAwesomeIcon icon={faTrash} onClick={e=> deleteExperience(e, skill)} />
@@ -64,8 +70,7 @@ class SkillSlot extends Component {
 
         return (
             <form className='skillForm'>
-                I am an individiaul Skill Slot. My value is <div></div>
-                {skill.skill} and my type is {skill.type} and my edit is {skill.edit}
+                {skill.skill} |
                 <FontAwesomeIcon icon={faPenToSquare} onClick={(e) => toggleSkillEdit(e, skill)}/>
                 <FontAwesomeIcon icon={faTrash} onClick={e=> deleteExperience(e, skill)} />
 

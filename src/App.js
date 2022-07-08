@@ -65,6 +65,8 @@ class App extends Component {
   }
 
   updateInputField(e, targetParent, targetField) {
+    e.preventDefault()
+    console.log('------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------')
     // console.log(`I am updateInputField, here are my passed args`);
     // console.log(e)
     // console.log(e.target.value);
@@ -97,8 +99,8 @@ class App extends Component {
           }),
         }
       })
-    } else if (targetField.type === 'skill') {
-      console.log('Editing a skill value');
+    } else if (targetParent.type === 'skill') {
+      // console.log('Editing a skill value');
       this.setState({
         skillArr: this.state.skillArr.map(element => {
           if(element === targetField){
@@ -156,7 +158,7 @@ class App extends Component {
         }
       })
     } else if(targetType === 'skill') {
-      console.log('here');
+      // console.log('here');
       this.setState({
         skillArr: this.state.skillArr.concat({
           type: 'skill',

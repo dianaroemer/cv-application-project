@@ -48,6 +48,7 @@
 
 .workExperienceSlot {
   padding-top: 12px;
+  padding-left: 15px;
 }
 
 .workExperienceSlot button {
@@ -67,8 +68,53 @@
   
 }
 
+.skillsHeaderText {
+  position: relative;
+  left: 46%
+}
 
+.skillForm {
+  padding-left: 12px;
+}
 
+#skillAddButton {
+
+  position: relative;
+  left: 44.6%;
+  font-size: 15px;
+  margin-top: 8px;
+  padding: 7px;
+  border-width: 1.5px;
+  border-radius: 5px;
+  box-shadow: 2px 1px 6px grey;
+}
+
+.educationExperienceForm h3 {
+  position: relative;
+  left: 39%
+}
+
+.educationExperienceSlot {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.educationExperienceSlot button {
+  margin-top: 8px;
+  margin-left: 60px;
+  padding: 3px;
+}
+
+#educationAddButton {
+  position: relative;
+  left: 38%;
+  font-size: 15px;
+  margin-top: 8px;
+  padding: 7px;
+  border-width: 1.5px;
+  border-radius: 5px;
+  box-shadow: 2px 1px 6px grey;
+}
 
 
 

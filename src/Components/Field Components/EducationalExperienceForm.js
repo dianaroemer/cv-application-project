@@ -22,7 +22,7 @@ class EducationalExperienceForm extends Component {
         });
 
         return (
-            <div className='educationExperienceField' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'brown', borderWidth: 10}}>
+            <div className='educationExperienceForm' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'brown', borderWidth: 10}}>
                 <h3>Educational Experience</h3>
 
                 {/* <EducationalExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/> */}

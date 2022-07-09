@@ -24,11 +24,11 @@ class SkillForm extends Component {
         
 
         return (
-            <div className='SkillForm' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'red', borderWidth: 10}}>
+            <div className='skillForm' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'red', borderWidth: 10}}>
                 <h3 className='skillsHeaderText'>Skills</h3>
                 {skillRows}
                 
-            <button type="submit" onClick={e => createExperience(e, 'skill')}>Add Another Skill</button>
+            <button type="submit" onClick={e => createExperience(e, 'skill')} id='skillAddButton'>Add Skills</button>
             <p></p>
         </div>
         )

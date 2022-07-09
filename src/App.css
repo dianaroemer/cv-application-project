@@ -19,8 +19,8 @@
 }
 
 .FormContainer {
-  margin: 35px 30px 0 30px;
-  width: 900px;
+  margin: 35px 30px 0 50px;
+  width: 850px;
 }
 
 .sampleStateButton {
@@ -123,7 +123,7 @@
 /* ------------ Styling for previewPane ------------ */
 
 .previewContainer {
-  margin: 30px 35px 0 35px;
+  margin: 30px 65px 0 ;
   padding: 30px 50px 100px 50px;
   display: block;
   font-family: 'Lato';

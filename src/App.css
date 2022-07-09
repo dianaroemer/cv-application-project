@@ -32,7 +32,39 @@
   border-width: 1.5px;
   border-radius: 5px;
   box-shadow: 2px 2px 6px grey;
+}
 
+.personalInformationForm {
+  padding-left: 15px;
+}
+
+.personalInformationForm h3 {
+  text-align: center;
+}
+
+.workExperienceForm h3 {
+  text-align: center;
+}
+
+.workExperienceSlot {
+  padding-top: 12px;
+}
+
+.workExperienceSlot button {
+  margin-top: 8px;
+  margin-left: 60px;
+  padding: 3px;
+}
+
+#workAddButton {
+  position: relative;
+  left: 41%;
+  font-size: 15px;
+  padding: 5px;
+  border-width: 1.5px;
+  border-radius: 5px;
+  box-shadow: 2px 1px 6px grey;
+  
 }
 
 
@@ -109,7 +141,7 @@
   margin-top: 0px;
   /* margin-bottom: 0px; */
   display: grid;
-  grid-template-columns: 300px 450px;
+  grid-template-columns: 350px 450px;
 }
 
 .previewEducationalExperienceSlot{

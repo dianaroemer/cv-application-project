@@ -23,14 +23,14 @@ class EducationalExperienceForm extends Component {
 
         return (
             <div className='educationExperienceField' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'brown', borderWidth: 10}}>
-                <h3>I am EducationalExperienceForm.js. I take all of the educational experience fields and keep them together! I am one wrapper field with an add button, and an interating subcomponent for variable numbers of educationExperienceField</h3>
+                <h3>Educational Experience</h3>
 
                 {/* <EducationalExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/> */}
                 {/* <EducationalExperienceSlot style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'maroon', borderWidth: 10}}/> */}
                 {rows}
             
             <p></p>
-            <button type="submit" onClick={e => createExperience(e,elementType)}>Add More Educational Experience</button>
+            <button type="submit" onClick={e => createExperience(e,elementType)} id='educationAddButton'>Add Educational Experience</button>
             <p></p>
         </div>
         )
@@ -48,9 +48,7 @@ class EducationalExperienceSlot extends Component {
         const {educationalExperience, updateInputField, deleteExperience} = this.props;
 
         return (
-            <form className='educationExperienceSlot' style={{borderStyle: 'dotted', borderRadius: 2, borderColor: 'aqua', borderWidth: 10}}>
-                <p>I am an individual EducationExperienceSlot. There can be several or none of me, and are determined variably by state management in app!</p>
-
+            <form className='educationExperienceSlot' style={{borderStyle: 'dashed', borderRadius: 2, borderColor: 'black', borderWidth: 3}}>
 
                 <div className='institutionFieldContainer'>
                     Institution: <input className="inputField" type="text" placeholder='Hogwarts School of Witchcraft and Wizardry' onChange={e => updateInputField(e, educationalExperience, 'institution')} value={educationalExperience.institution}></input>

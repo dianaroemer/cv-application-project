@@ -11,7 +11,7 @@ class PersonalInformationForm extends Component {
 
         return (
             <div className='personalInformationForm' style={{borderStyle: 'solid', borderRadius: 2, borderColor: 'purple', borderWidth: 10}}>
-                <h3>I am personalInformationForm.js. I take all of the personal information fields and keep them in one place!</h3>
+                <h3>Personal Information</h3>
                 <div className='nameFieldContainer'>
                     Name: <input className="inputField" type="text" placeholder='Ferris Bueller' onChange={e => updateInputField(e, personalInformation, 'name')} value={personalInformation.name}></input>
                 </div>

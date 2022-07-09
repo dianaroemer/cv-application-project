@@ -49,6 +49,7 @@
 .workExperienceSlot {
   padding-top: 12px;
   padding-left: 15px;
+  margin-bottom: 1px;
 }
 
 .workExperienceSlot button {
@@ -97,6 +98,7 @@
 .educationExperienceSlot {
   padding-top: 15px;
   padding-left: 15px;
+  margin-bottom: 1px;
 }
 
 .educationExperienceSlot button {

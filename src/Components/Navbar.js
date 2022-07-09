@@ -20,7 +20,7 @@ class Navbar extends Component {
                 </div>
                 
                 <div className="navTitle">
-                    CV-Application Project
+                    CV-Application
                 </div>
                 
 

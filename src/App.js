@@ -283,7 +283,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="AppContainer">
+      <div className="AppContainer" style={{backgroundColor: 'bisque'}}>
+        {/* Rendering Navbar as a child of AppContainer was hiding the boxshadow in between the two chil elements, NavBar and Content. Manually setting the parent background color to bisque and adding a margin-bottom offset has made the box-shadow visible. Future fix would be rendering NavBar before AppContainer's contents. */}
         {/* <h2>I am App.js, my parent is AppContainer. Would you like to develop an App?</h2> */}
         <Navbar/>
         <div className='content' >
